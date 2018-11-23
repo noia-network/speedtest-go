@@ -36,6 +36,8 @@ func main() {
 	targets, err := serverList.FindServer(*serverIds)
 	checkError(err)
 
+	fmt.Println("test", targets[0].URL, targets[0].URL2, targets[0].Host)
+
 	startTest(targets)
 }
 

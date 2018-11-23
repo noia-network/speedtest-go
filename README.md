@@ -1,6 +1,6 @@
 # speedtest-go
 ##### Command Line Interface and pure Go API to Test Internet Speed using [speedtest.net](http://www.speedtest.net/)  
-You can speedtest 2x faster than [speedtest.net](http://www.speedtest.net/) with almost the same result. [See the experimental results.](https://github.com/showwin/speedtest-go#summary-of-experimental-results).
+You can speedtest 2x faster than [speedtest.net](http://www.speedtest.net/) with almost the same result. 
 
 This fork allows abstracts the implementation of the speed test to a package so it can be used by other go programs. 
 
@@ -39,19 +39,9 @@ func main() {
 ```
 
 ## CLI Installation
-### OS X (homebrew)
+```bash
+go install github.com/cbergoon/speedtest-go
 ```
-$ brew tap showwin/speedtest
-$ brew install speedtest
-
-### How to Update ###
-$ brew update
-$ brew upgrade speedtest
-```
-
-### Others (Linux, Windows, etc.)
-Please download compatible package from [Releases](https://github.com/showwin/speedtest-go/releases).  
-If there are no compatible package you want, please let me know by creating an [issue](https://github.com/showwin/speedtest-go/issues).
 
 ## CLI Usage
 ```
@@ -124,7 +114,7 @@ Speedtest-go is a great tool because of following 2 reasons:
 * Testing time is the **SHORTEST** compare to [speedtest.net](http://www.speedtest.net/) and [sivel/speedtest-cli](https://github.com/sivel/speedtest-cli), especially about 2x faster then [speedtest.net](http://www.speedtest.net/).
 * Result is **MORE CLOSE** to [speedtest.net](http://www.speedtest.net/) than [speedtest-cli](https://github.com/sivel/speedtest-cli).
 
-Following data is summarized. If you got interested in, please see [more details](https://github.com/showwin/speedtest-go/blob/master/docs/experimental_result.md).
+Following data is summarized. 
 
 ### Download (Mbps)
 distance = distance to testing server
@@ -162,4 +152,4 @@ distance = distance to testing server
 
 ## LICENSE
 
-[MIT](https://github.com/showwin/speedtest-go/blob/master/LICENSE)
+[MIT](https://github.com/cbergoon/speedtest-go/blob/master/LICENSE)
