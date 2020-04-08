@@ -61,7 +61,7 @@ func (b ByDistance) Less(i, j int) bool {
 // FetchServerList retrieves a list of available servers
 func FetchServerList(user *User) (ServerList, error) {
 	// Fetch xml server data
-	resp, err := http.Get("http://www.speedtest.net/speedtest-servers-static.php")
+	resp, err := http.Get("https://speedtest.noia.network/servers.xml")
 	if err != nil {
 		return ServerList{}, errors.New("failed to retrieve speedtest servers")
 	}
@@ -72,7 +72,7 @@ func FetchServerList(user *User) (ServerList, error) {
 	defer resp.Body.Close()
 
 	if len(body) == 0 {
-		resp, err = http.Get("http://c.speedtest.net/speedtest-servers-static.php")
+		resp, err = http.Get("https://speedtest.noia.network/servers.xml")
 		if err != nil {
 			errors.New("failed to retrieve alternate speedtest servers")
 		}
